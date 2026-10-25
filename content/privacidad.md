@@ -37,7 +37,7 @@ OZZYDEV SpA y sus prestadores autorizados pueden acceder a la información neces
 
 ## 5. Proveedores y transferencias internacionales
 
-Supabase presta autenticación, base de datos y almacenamiento. La región declarada para el proyecto es us-west-1, Estados Unidos, Norte de California. Servicios de soporte, distribución y otros subencargados pueden intervenir fuera de esa región. No afirmamos que toda la información permanezca en Chile. El inventario de proveedores y las salvaguardas de transferencias deben mantenerse actualizados conforme al régimen aplicable.
+Supabase presta autenticación, base de datos y almacenamiento. La región declarada para el proyecto es us-west-2, Estados Unidos, Oregón. Servicios de soporte, distribución y otros subencargados pueden intervenir fuera de esa región. No afirmamos que toda la información permanezca en Chile. El inventario de proveedores y las salvaguardas de transferencias deben mantenerse actualizados conforme al régimen aplicable.
 
 GitHub Pages sirve este sitio informativo y procesa datos técnicos, incluida la IP, para su funcionamiento y seguridad. El sitio no integra analítica publicitaria, videos externos ni píxeles de seguimiento propios. Si nos escribes al Gmail de contacto, Google procesa esa comunicación como proveedor del correo. El envío de mensajes de autenticación depende del proveedor SMTP configurado en Supabase; su identificación y condiciones deben confirmarse antes de la apertura general del piloto.
 
