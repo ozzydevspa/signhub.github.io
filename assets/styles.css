@@ -8,6 +8,8 @@
 /* Section-bound interpretation. No floating or sticky player. */
 [hidden]{display:none!important}
 .hero-visual{min-width:0}.hero-visual .hero-art{min-height:555px}.hero-visual .float-card{display:none}
+.hero>div{min-width:0}.hero h1{overflow-wrap:anywhere}
+@media(max-width:650px){.hero h1{font-size:clamp(2.7rem,11vw,3.3rem)}}
 .interpretation{margin-top:28px;border:1px solid #c4d9ea;border-radius:18px;background:#f0f7fd;color:var(--ink);overflow:hidden;text-align:left}
 .sign-summary{display:flex;align-items:center;gap:16px;padding:22px 24px;flex-wrap:wrap}
 .sign-icon{flex:0 0 46px;width:46px;height:46px;display:grid;place-items:center;background:#dcecf9;color:#286da8;border-radius:13px}

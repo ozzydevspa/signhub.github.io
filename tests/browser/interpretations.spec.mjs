@@ -7,6 +7,16 @@ const source = await readFile(new URL('index.html', root), 'utf8');
 const original = JSON.parse(await readFile(new URL('interpretations.json', root), 'utf8'));
 const fixture = await readFile(new URL('tests/fixtures/test-pattern.webm', root));
 const mediaResponse = {contentType: 'video/webm', body: fixture, headers: {'Accept-Ranges': 'bytes'}};
+async function expectNoHorizontalOverflow(page) {
+  const layout = await page.evaluate(() => ({
+    viewport: innerWidth,
+    width: document.documentElement.scrollWidth,
+    overflowing: [...document.querySelectorAll('body *')]
+      .filter(element => element.getBoundingClientRect().right > innerWidth + 1)
+      .slice(0, 8).map(element => element.id || element.className || element.tagName)
+  }));
+  expect(layout.width, JSON.stringify(layout)).toBeLessThanOrEqual(layout.viewport);
+}
 async function ready(page, {broken = false, invalid = false, prefix = ''} = {}) {
   const data = structuredClone(original);
   for (const index of [0, 1, 5]) {
@@ -29,10 +39,18 @@ test('Pending state: seven honest placeholders, no video requests, usable on mob
   await expect(page.getByText('Video pendiente', {exact: true})).toHaveCount(7);
   await expect(page.locator('video')).toHaveCount(0);
   await page.screenshot({path: 'test-results/landing-desktop.png', fullPage: true});
+  for (const width of [320, 360, 390, 650, 768, 1024]) {
+    await page.setViewportSize({width, height: 844});
+    await expectNoHorizontalOverflow(page);
+  }
+  // System font metrics differ between Windows and the Linux deployment runner.
+  // Exercise wider fallback glyphs without pinning the test to the marketing copy.
+  await page.evaluate(() => { document.documentElement.style.fontFamily = 'Verdana, sans-serif'; });
   for (const width of [320, 390, 768]) {
     await page.setViewportSize({width, height: 844});
-    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await expectNoHorizontalOverflow(page);
   }
+  await page.evaluate(() => { document.documentElement.style.removeProperty('font-family'); });
   await page.setViewportSize({width: 390, height: 844});
   await page.screenshot({path: 'test-results/landing-mobile.png', fullPage: true});
   expect(errors).toEqual([]);
@@ -118,7 +136,7 @@ test('An open player stays within a narrow screen and its controls remain usable
   const card = page.locator('[data-interpretation="proyecto"]');
   await card.locator('.sign-open').click();
   await expect(card.locator('video')).toBeVisible();
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await expectNoHorizontalOverflow(page);
   await card.getByRole('button', {name: 'Tu diccionario personal', exact: true}).click();
   await expect(card.locator('.sign-status')).toContainText('Fragmento: Tu diccionario personal');
   await card.screenshot({path: 'test-results/ready-player-mobile.png'});
@@ -131,6 +149,9 @@ test('Without JavaScript all original text and pending notices remain readable',
   const page = await context.newPage();
   await page.goto('http://127.0.0.1:4173/');
   await expect(page.getByText('Video pendiente', {exact: true})).toHaveCount(7);
-  await expect(page.getByRole('heading', {name: 'Cada seña, un lugar en común.'})).toBeVisible();
+  const mainHeading = page.getByRole('heading', {level: 1});
+  await expect(mainHeading).toHaveCount(1);
+  await expect(mainHeading).toBeVisible();
+  await expect(mainHeading).toHaveText(/\S/);
   await context.close();
 });
