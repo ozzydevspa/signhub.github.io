@@ -2,12 +2,16 @@
 
 Sitio estático sin dependencias de producción, cookies propias, backend, claves Supabase ni cobros. Titular: OZZYDEV SpA. El domicilio residencial no está incluido.
 
+## Interpretación en lengua de señas
+
+La portada incluye un espacio de interpretación por bloque y reproducción por fragmentos de texto. Configura videos y tiempos en `interpretations.json`; consulta [INTERPRETACION.md](INTERPRETACION.md) para publicar los primeros archivos. Hasta entonces aparece «Video pendiente». Las pruebas de navegador utilizan un video sintético que no se publica.
+
 ## Publicar en el repositorio solicitado
 
-El repositorio comprobado es `https://github.com/ozzydevspa/signhub.github.io` (sin punto final). La conexión disponible al preparar estos archivos tiene lectura, no escritura. Copiar **el contenido de esta carpeta**, incluyendo `.github`, a la raíz de ese repositorio. No subir el proyecto Android, `local.properties`, credenciales ni documentos internos.
+Este directorio es el repositorio independiente `https://github.com/ozzydevspa/signhub.github.io`. Los cambios se publican con commit y push a `main`. No subir el proyecto Android, `local.properties`, credenciales ni documentos internos.
 
 1. Revisar los textos legales y el inventario de operaciones antes del lanzamiento. La página identifica el estado de piloto; no anuncia cobros activos ni certificación legal.
-2. Ejecutar `npm run build` y `npm test` (Node 24).
+2. Ejecutar `npm ci`, `npm run build`, `npm test` y `npm run test:browser` (Node 24). La primera vez, instalar Chromium con `npx playwright install chromium`.
 3. En GitHub: Settings → Pages → Build and deployment → Source → GitHub Actions.
 4. Subir a `main` o ejecutar el workflow `Publish informational website`.
 5. Comprobar la URL devuelta por Actions. Con este nombre de repositorio será normalmente `https://ozzydevspa.github.io/signhub.github.io/`. Para publicar directamente en `https://ozzydevspa.github.io/` el repositorio debe llamarse `ozzydevspa.github.io`.

@@ -1,0 +1,57 @@
+{
+  "language": "Lengua de Señas Chilena",
+  "blocks": [
+    {
+      "id": "presentacion", "title": "Cada seña, un lugar en común", "src": null, "poster": null,
+      "segments": [{"target": "texto-presentacion", "label": "Conoce SignHub", "start": null, "end": null}]
+    },
+    {
+      "id": "proyecto", "title": "El proyecto", "src": null, "poster": null,
+      "segments": [
+        {"target": "texto-proyecto", "label": "Lo que aprendes y compartes", "start": null, "end": null},
+        {"target": "texto-personal", "label": "Tu diccionario personal", "start": null, "end": null},
+        {"target": "texto-comunidad", "label": "El diccionario de tu comunidad", "start": null, "end": null}
+      ]
+    },
+    {
+      "id": "funcionamiento", "title": "Cómo funciona", "src": null, "poster": null,
+      "segments": [
+        {"target": "texto-funcionamiento", "label": "Una experiencia visual", "start": null, "end": null},
+        {"target": "texto-captura", "label": "Graba una seña", "start": null, "end": null},
+        {"target": "texto-organiza", "label": "Dale un contexto", "start": null, "end": null},
+        {"target": "texto-conecta", "label": "Elige dónde vive", "start": null, "end": null}
+      ]
+    },
+    {
+      "id": "planes", "title": "Planes para tu comunidad", "src": null, "poster": null,
+      "segments": [
+        {"target": "texto-planes", "label": "Planes y precios propuestos", "start": null, "end": null},
+        {"target": "texto-plan-comunidad", "label": "Plan Comunidad", "start": null, "end": null},
+        {"target": "texto-plan-institucion", "label": "Plan Institución", "start": null, "end": null},
+        {"target": "texto-plan-organizacion", "label": "Plan Organización", "start": null, "end": null},
+        {"target": "texto-condiciones", "label": "Diccionario personal y condiciones", "start": null, "end": null}
+      ]
+    },
+    {
+      "id": "privacidad", "title": "Privacidad y contenido", "src": null, "poster": null,
+      "segments": [
+        {"target": "texto-audiencia", "label": "Con quién compartes", "start": null, "end": null},
+        {"target": "texto-autorizaciones", "label": "Autorizaciones para publicar", "start": null, "end": null}
+      ]
+    },
+    {
+      "id": "preguntas", "title": "Preguntas frecuentes", "src": null, "poster": null,
+      "segments": [
+        {"target": "texto-ensenanza", "label": "Enseñanza y certificación", "start": null, "end": null},
+        {"target": "texto-menores", "label": "Niños, niñas y adolescentes", "start": null, "end": null},
+        {"target": "texto-demo", "label": "Demostraciones institucionales", "start": null, "end": null},
+        {"target": "texto-plataformas", "label": "Plataformas disponibles", "start": null, "end": null},
+        {"target": "texto-descarga", "label": "Cómo obtener la app", "start": null, "end": null}
+      ]
+    },
+    {
+      "id": "contacto", "title": "Conversemos sobre SignHub", "src": null, "poster": null,
+      "segments": [{"target": "texto-contacto", "label": "Participa en el piloto", "start": null, "end": null}]
+    }
+  ]
+}

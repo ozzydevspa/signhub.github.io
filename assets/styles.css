@@ -4,3 +4,29 @@
 @media(max-width:850px){.nav-links{gap:15px}.hero{gap:25px;padding-top:35px}.hero-art{min-height:520px}.float-card{right:0;bottom:55px}.section-intro{gap:30px}.prices{gap:12px}.price{padding:22px}.price-value{font-size:2.1rem}.privacy-block{padding:35px;gap:30px}.contact{padding:35px}.ribbon .wrap{flex-wrap:wrap}}
 @media(max-width:650px){.wrap{padding-left:22px;padding-right:22px}.nav{align-items:flex-start}.nav-links{justify-content:flex-end;gap:12px;flex-wrap:wrap;font-size:.8rem;max-width:220px}.nav-links .button{display:none}.hero{grid-template-columns:1fr;padding-top:32px;padding-bottom:45px}.hero-art{margin:10px 10px 0;min-height:540px}.hero-art:before{right:-8px}.float-card{right:-10px}.hero .intro{font-size:1rem}.ribbon .wrap{gap:15px;justify-content:center;font-size:.8rem}.section{padding-top:55px;padding-bottom:55px}.section-intro,.two-col,.steps,.prices,.privacy-block{grid-template-columns:1fr;gap:22px}.section-intro{margin-bottom:30px}.feature{padding:27px}.number{margin-bottom:22px}.steps{gap:20px}.step .eyebrow{margin-bottom:16px}.price{padding:28px}.price-value{font-size:2.7rem}.privacy-block{padding:28px}.privacy-block h2{font-size:2.2rem}.contact{display:block;padding:30px}.contact .button{margin-top:25px}.footer-links{gap:15px}.legal{padding:30px 22px 60px}.legal table{font-size:.82rem}.legal td,.legal th{padding:8px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.button:hover{transform:none}}@media print{.nav,.actions,footer,.button,.hero-art{display:none}.legal{max-width:none;padding:0}body{background:white;color:black}a{color:black}}
+
+/* Section-bound interpretation. No floating or sticky player. */
+[hidden]{display:none!important}
+.hero-visual{min-width:0}.hero-visual .hero-art{min-height:555px}.hero-visual .float-card{display:none}
+.interpretation{margin-top:28px;border:1px solid #c4d9ea;border-radius:18px;background:#f0f7fd;color:var(--ink);overflow:hidden;text-align:left}
+.sign-summary{display:flex;align-items:center;gap:16px;padding:22px 24px;flex-wrap:wrap}
+.sign-icon{flex:0 0 46px;width:46px;height:46px;display:grid;place-items:center;background:#dcecf9;color:#286da8;border-radius:13px}
+.sign-icon svg{width:31px;height:31px}.sign-heading{flex:1;min-width:180px}.sign-kicker{display:block;font-size:.68rem;font-weight:750;letter-spacing:.07em;text-transform:uppercase;color:#286597;margin-bottom:5px}
+.sign-heading h3{font-size:1.06rem;letter-spacing:-.02em;margin:0 0 5px;line-height:1.4}.sign-heading p{font-size:.83rem;line-height:1.55;margin:0;color:#4d6477;padding:0}
+.sign-pending-label{border:1px solid #c3d5e4;background:#fff;color:#486174;border-radius:30px;padding:7px 12px;font-size:.75rem;font-weight:650;white-space:nowrap}
+.hero-visual .interpretation{margin-top:18px}.hero-visual .sign-summary{padding:20px}.hero-visual .sign-pending-label{margin-left:62px}
+.sign-open{font-size:.87rem;padding:12px 18px}.sign-panel{padding:0 24px 24px;border-top:1px solid #c4d9ea}
+.sign-panel video{display:block;width:100%;max-height:70vh;aspect-ratio:16/9;object-fit:contain;background:#122b3f;border-radius:12px;margin:22px auto 0}
+.sign-status{min-height:1.6em;font-size:.9rem;line-height:1.6;margin:14px 0;color:#2c4f69}
+.sign-player-actions,.sign-chapters{display:flex;gap:10px;flex-wrap:wrap}
+.sign-player-actions button,.sign-chapters button,.sign-cue{border:1px solid #9bbbd4;border-radius:9px;background:white;color:#235f91;min-height:44px;padding:10px 14px;cursor:pointer;font-size:.85rem;font-weight:650;text-align:left;line-height:1.4}
+.sign-player-actions button:hover,.sign-chapters button:hover,.sign-cue:hover{background:#dcecf9}
+.sign-chapters button[aria-pressed=true],.sign-cue[aria-pressed=true]{background:#1e527b;color:white;border-color:#1e527b}
+.sign-cue{margin-top:12px}.sign-help{font-size:.85rem;color:#4d6477;margin:18px 0 12px}.sign-text-linked{cursor:pointer;scroll-margin-top:25px}
+.sign-text-active{outline:3px solid #377dbd;outline-offset:6px;border-radius:4px}
+.price.featured.sign-text-active{outline-color:#377dbd}.sign-text-wrap{min-width:0}
+.faq .interpretation h3{text-align:left}.faq .sign-text-wrap{padding-bottom:8px}
+.contact+.interpretation{margin-bottom:25px}
+@media(max-width:650px){.hero-visual .hero-art{min-height:520px}.sign-summary{padding:18px;gap:12px}.sign-heading{min-width:160px}.sign-pending-label{margin-left:58px}.hero-visual .sign-pending-label{margin-left:58px}.sign-panel{padding:0 16px 18px}.sign-open{width:100%}.sign-chapters{display:grid;grid-template-columns:1fr}.sign-player-actions button{flex:1}.sign-panel video{max-height:60vh}.sign-heading h3{font-size:1rem}}
+@media print{.interpretation,.sign-cue{display:none}.sign-text-active{outline:none}}
+@media(max-width:360px){.hero-visual .phone{width:240px;transform:rotate(-3deg)}.hero-visual .hero-art{min-height:510px}.sign-heading{min-width:140px}}

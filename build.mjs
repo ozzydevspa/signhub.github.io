@@ -1,6 +1,7 @@
 import {readFile,writeFile,mkdir,cp,readdir} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
+import {validateInterpretations, renderInterpretations} from './lib/interpretations.mjs';
 const root=path.dirname(fileURLToPath(import.meta.url));
 const dest=path.join(root,'dist');
 const config=JSON.parse(await readFile(path.join(root,'site.config.json'),'utf8'));
@@ -19,7 +20,11 @@ function markdown(source){let output='',list=false;for(const line of source.spli
 }return output+(list?'</ul>':'');}
 await mkdir(path.join(dest,'legal'),{recursive:true});
 await cp(path.join(root,'assets'),path.join(dest,'assets'),{recursive:true});
-for(const file of ['index.html','robots.txt','.nojekyll'])await cp(path.join(root,file),path.join(dest,file));
+const landing = await readFile(path.join(root,'index.html'),'utf8');
+const interpretations = JSON.parse(await readFile(path.join(root,'interpretations.json'),'utf8'));
+await validateInterpretations(interpretations, landing, root);
+await writeFile(path.join(dest,'index.html'),renderInterpretations(interpretations, landing));
+for(const file of ['robots.txt','.nojekyll'])await cp(path.join(root,file),path.join(dest,file));
 for(const file of await readdir(path.join(root,'content'))){if(!file.endsWith('.md'))continue;
   const source=await readFile(path.join(root,'content',file),'utf8');const title=source.split('\n')[0].replace(/^# /,'');
   const html=`<!doctype html><html lang="es-CL"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="${escape(title)} de SignHub, OZZYDEV SpA."><title>${escape(title)} · SignHub</title><link rel="icon" href="../assets/logo.svg"><link rel="stylesheet" href="../assets/styles.css"></head><body><header class="wrap nav"><a class="brand" href="../"><img src="../assets/logo.svg" alt="">signhub.</a><a href="../">Volver al proyecto</a></header><main class="legal">${markdown(source)}<nav aria-label="Documentos"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="eliminar-cuenta.html">Eliminar cuenta y datos</a><a href="menores.html">Menores</a><a href="comunidad.html">Comunidad</a><a href="promociones.html">Pilotos</a></nav></main><footer class="wrap footer-meta">${escape(config.company)} · RUT ${escape(config.rut)} · ${escape(config.location)}<br><a href="mailto:${escape(config.contact)}">${escape(config.contact)}</a> · Versión ${escape(config.legalVersion)}</footer>${file==='eliminar-cuenta.md'?'<script src="../assets/request.js" defer></script>':''}</body></html>`;
