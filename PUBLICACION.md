@@ -1,5 +1,7 @@
 # Publicar OZZYDEV y SignHub
 
+**Estado verificado el 27-10-2026:** `https://ozzydev.cl/` y `/signhub/` disponibles con certificado válido. HTTP y `www` redirigen a HTTPS del dominio principal. Las URLs antiguas de GitHub Pages redirigen al dominio y los documentos legales antiguos siguen disponibles. Los pasos de conexión siguientes quedan como referencia de mantenimiento.
+
 ## Estructura y edición
 
 Este repositorio publica **un sitio estático**, sin cuentas ni panel web:
@@ -23,7 +25,7 @@ npm run test:browser
 
 El workflow de `main` valida antes de desplegar. Recibe el prefijo real de Pages para la página 404. Los enlaces y recursos usan rutas relativas y funcionan tanto bajo `/signhub.github.io/` como en el dominio propio. Los videos locales se configuran con `assets/...`; el build adapta su ubicación para `/signhub/`.
 
-## Conectar ozzydev.cl (pasos de panel pendientes)
+## Conectar ozzydev.cl (referencia de configuración)
 
 1. En la cuenta GitHub **propietaria del repositorio**, abrir Settings → Pages → Add a domain. Añadir `ozzydev.cl`, copiar el nombre y valor TXT que entregue GitHub y crearlo en Cloudflare. Volver a GitHub y verificar. Conservar ese TXT. La API identifica actualmente `ozzydevspa` como cuenta de tipo **User**; no confundir su nombre comercial con una organización GitHub. [Verificación oficial](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages).
 2. En `ozzydevspa/signhub.github.io` → Settings → Pages, mantener **GitHub Actions**, introducir **`ozzydev.cl`** en Custom domain y guardar. No escribir `https://` ni `/signhub/`. Hacerlo después de verificar propiedad y antes de apuntar los registros web.
