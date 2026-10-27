@@ -5,7 +5,7 @@ async function walk(dir){let all=[];for(const item of await readdir(dir,{withFil
 let count=0;
 for(const file of await walk(root)){
   if(!file.endsWith('.html'))continue;const html=await readFile(file,'utf8');
-  assert.match(html,/<html lang="es-CL">/);assert.match(html,/<main/);assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
+  assert.match(html,/<html\b[^>]*\blang="es-CL"(?:\s[^>]*)?>/);assert.match(html,/<main/);assert.equal((html.match(/<h1[ >]/g)||[]).length,1);
   assert(!/service_role|SUPABASE_ANON_KEY|sb_secret_/i.test(html),'Private configuration in public HTML');
   assert(!html.includes('href="#"'),'Dead link');
   for(const [,target] of html.matchAll(/(?:href|src)="([^"]+)"/g)){

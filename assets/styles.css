@@ -32,3 +32,9 @@
 @media(max-width:650px){.hero-visual .hero-art{min-height:520px}.sign-summary{padding:18px;gap:12px}.sign-heading{min-width:160px}.sign-pending-label{margin-left:58px}.hero-visual .sign-pending-label{margin-left:58px}.sign-panel{padding:0 16px 18px}.sign-open{width:100%}.sign-chapters{display:grid;grid-template-columns:1fr}.sign-player-actions button{flex:1}.sign-panel video{max-height:60vh}.sign-heading h3{font-size:1rem}}
 @media print{.interpretation,.sign-cue{display:none}.sign-text-active{outline:none}}
 @media(max-width:360px){.hero-visual .phone{width:240px;transform:rotate(-3deg)}.hero-visual .hero-art{min-height:510px}.sign-heading{min-width:140px}}
+
+/* Keep navigation visible while native anchor links retain history and keyboard support. */
+.sticky-navigation{scroll-padding-top:var(--navigation-offset,120px)}
+.site-header{position:sticky;top:0;z-index:8;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 3px 12px #1d334508}
+@media(max-width:650px){.sticky-navigation{scroll-padding-top:var(--navigation-offset,170px)}}
+@media print{.site-header{display:none}}

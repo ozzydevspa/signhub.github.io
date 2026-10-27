@@ -57,3 +57,46 @@ test('Deletion request only prepares email for the privacy inbox', async ({page}
   await expect(page.getByRole('status')).toContainText('privacidad@ozzydev.cl');
   await expect(page.getByRole('status')).toContainText('Aún no se ha enviado');
 });
+
+
+test('Sticky menus and anchor destinations remain visible on desktop and mobile', async ({page}) => {
+  for (const [route, anchor] of [['/', '#aplicaciones'], ['/signhub/', '#planes']]) {
+    await page.goto(route);
+    for (const width of [1280, 320, 390]) {
+      await page.setViewportSize({width, height:844});
+      const header = page.locator('.site-header');
+      await expect.poll(async () => page.evaluate(() =>
+        parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) -
+        document.querySelector('.site-header').getBoundingClientRect().height
+      )).toBeGreaterThanOrEqual(16);
+      await page.evaluate(() => window.scrollTo({top:0, behavior:'instant'}));
+      await page.locator(`.nav-links a[href="${anchor}"]`).click();
+      await expect(page).toHaveURL(new RegExp(`${anchor}$`));
+      await expect.poll(async () => {
+        const target = await page.locator(anchor).boundingBox();
+        const menu = await header.boundingBox();
+        return Math.round(target.y - menu.height);
+      }).toBe(16);
+      expect((await header.boundingBox()).y).toBe(0);
+      await expect(page.locator(`.nav-links a[href="${anchor}"]`)).toBeInViewport();
+      expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    }
+    // Opening or reloading a section URL must also leave its title below the menu.
+    await page.reload();
+    await expect.poll(async () => {
+      const target = await page.locator(anchor).boundingBox();
+      const menu = await page.locator('.site-header').boundingBox();
+      return target.y >= menu.height;
+    }).toBe(true);
+  }
+});
+
+test('Anchor animations follow the visitor reduced-motion preference', async ({page}) => {
+  for (const route of ['/', '/signhub/']) {
+    await page.emulateMedia({reducedMotion:'no-preference'});
+    await page.goto(route);
+    await expect(page.locator('html')).toHaveCSS('scroll-behavior', 'smooth');
+    await page.emulateMedia({reducedMotion:'reduce'});
+    await expect(page.locator('html')).toHaveCSS('scroll-behavior', 'auto');
+  }
+});
