@@ -14,7 +14,7 @@ Este directorio es el repositorio independiente `https://github.com/ozzydevspa/s
 2. Ejecutar `npm ci`, `npm run build`, `npm test` y `npm run test:browser` (Node 24). La primera vez, instalar Chromium con `npx playwright install chromium`.
 3. En GitHub: Settings → Pages → Build and deployment → Source → GitHub Actions.
 4. Subir a `main` o ejecutar el workflow `Publish informational website`.
-5. Comprobar la URL devuelta por Actions. Antes de conectar el dominio será `https://ozzydevspa.github.io/signhub.github.io/`; la landing estará en `signhub/` debajo de esa raíz. La estructura preparada para el dominio es `https://ozzydev.cl/` (empresa) y `https://ozzydev.cl/signhub/` (aplicación). Seguir [PUBLICACION.md](PUBLICACION.md) para verificar el dominio, conectar DNS y activar HTTPS sin cambiar el correo.
+5. Comprobar la URL devuelta por Actions. Antes de conectar el dominio será `https://ozzydevspa.github.io/signhub.github.io/`; la landing estará en `signhub/` debajo de esa raíz. La estructura preparada para el dominio es `https://www.ozzydev.cl/` (empresa) y `https://www.ozzydev.cl/signhub/` (aplicación). Seguir [PUBLICACION.md](PUBLICACION.md) para verificar el dominio, conectar DNS y activar HTTPS sin cambiar el correo.
 
 Mantener GitHub Actions como fuente. No configurar una segunda publicación desde rama en paralelo. `corporate.html` genera la portada corporativa y `index.html` la landing; los documentos legales conservan copias en las rutas antiguas para las apps instaladas.
 

@@ -25,7 +25,7 @@ test('Direct legal links and legacy URLs work without JavaScript; contacts stay 
       const response = await page.goto(`${prefix}${document}.html`);
       expect(response.status()).toBe(200);
       await expect(page.getByRole('heading', {level:1})).toBeVisible();
-      await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href',`https://ozzydev.cl/signhub/legal/${document}.html`);
+      await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href',`https://www.ozzydev.cl/signhub/legal/${document}.html`);
       await expect(page.locator('body')).not.toContainText('ozzykundev@gmail.com');
     }
     await page.goto(`${prefix}eliminar-cuenta.html`);
