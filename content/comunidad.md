@@ -12,7 +12,7 @@ SignHub reúne contenido aportado por personas e instituciones. OZZYDEV SpA no r
 
 ## Reportar un problema
 
-En el detalle de una seña puedes reportar contenido o bloquear a su autor cuando la función esté disponible en tu versión. También puedes escribir a [ozzykundev@gmail.com](mailto:ozzykundev@gmail.com?subject=Reporte%20de%20contenido%20SignHub). Indica el diccionario, la palabra o frase y el motivo. No adjuntes contenido especialmente sensible de forma innecesaria ni publiques datos del caso en issues de GitHub.
+En el detalle de una seña puedes reportar contenido o bloquear a su autor cuando la función esté disponible en tu versión. También puedes escribir a [soporte@ozzydev.cl](mailto:soporte@ozzydev.cl?subject=Reporte%20de%20contenido%20SignHub). Indica el diccionario, la palabra o frase y el motivo. No adjuntes contenido especialmente sensible de forma innecesaria ni publiques datos del caso en issues de GitHub.
 
 El operador debe registrar el reporte, evaluar el riesgo y adoptar medidas proporcionales: corrección de audiencia, solicitud de antecedentes, retirada de contenido o restricción de cuenta. La atención no es automática y no se promete vigilancia permanente del servicio. Los casos de riesgo inmediato para una persona deben dirigirse también a los servicios competentes.
 

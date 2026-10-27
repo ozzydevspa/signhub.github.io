@@ -1,10 +1,10 @@
-# SignHub — presentación y documentos públicos
+# OZZYDEV y SignHub — presentación y documentos públicos
 
 Sitio estático sin dependencias de producción, cookies propias, backend, claves Supabase ni cobros. Titular: OZZYDEV SpA. El domicilio residencial no está incluido.
 
 ## Interpretación en lengua de señas
 
-La portada incluye un espacio de interpretación por bloque y reproducción por fragmentos de texto. Configura videos y tiempos en `interpretations.json`; consulta [INTERPRETACION.md](INTERPRETACION.md) para publicar los primeros archivos. Hasta entonces aparece «Video pendiente». Las pruebas de navegador utilizan un video sintético que no se publica.
+La landing de SignHub incluye un espacio de interpretación por bloque y reproducción por fragmentos de texto. Configura videos y tiempos en `interpretations.json`; consulta [INTERPRETACION.md](INTERPRETACION.md) para publicar los primeros archivos. Hasta entonces aparece «Video pendiente». Las pruebas de navegador utilizan un video sintético que no se publica.
 
 ## Publicar en el repositorio solicitado
 
@@ -14,18 +14,18 @@ Este directorio es el repositorio independiente `https://github.com/ozzydevspa/s
 2. Ejecutar `npm ci`, `npm run build`, `npm test` y `npm run test:browser` (Node 24). La primera vez, instalar Chromium con `npx playwright install chromium`.
 3. En GitHub: Settings → Pages → Build and deployment → Source → GitHub Actions.
 4. Subir a `main` o ejecutar el workflow `Publish informational website`.
-5. Comprobar la URL devuelta por Actions. Con este nombre de repositorio será normalmente `https://ozzydevspa.github.io/signhub.github.io/`. Para publicar directamente en `https://ozzydevspa.github.io/` el repositorio debe llamarse `ozzydevspa.github.io`.
+5. Comprobar la URL devuelta por Actions. Antes de conectar el dominio será `https://ozzydevspa.github.io/signhub.github.io/`; la landing estará en `signhub/` debajo de esa raíz. La estructura preparada para el dominio es `https://ozzydev.cl/` (empresa) y `https://ozzydev.cl/signhub/` (aplicación). Seguir [PUBLICACION.md](PUBLICACION.md) para verificar el dominio, conectar DNS y activar HTTPS sin cambiar el correo.
 
-También se puede publicar solo el contenido de `dist/` desde la raíz de una rama, usando Pages → Deploy from a branch. En ese caso no se necesita el workflow.
+Mantener GitHub Actions como fuente. No configurar una segunda publicación desde rama en paralelo. `corporate.html` genera la portada corporativa y `index.html` la landing; los documentos legales conservan copias en las rutas antiguas para las apps instaladas.
 
 ## Enlaces para la aplicación y Play Console
 
-- `legal/privacidad.html`
-- `legal/terminos.html`
-- `legal/eliminar-cuenta.html`
-- `legal/menores.html`
-- `legal/comunidad.html`
-- `legal/promociones.html`
+- `signhub/legal/privacidad.html`
+- `signhub/legal/terminos.html`
+- `signhub/legal/eliminar-cuenta.html`
+- `signhub/legal/menores.html`
+- `signhub/legal/comunidad.html`
+- `signhub/legal/promociones.html`
 
 Los documentos HTML se generan desde `content/*.md`; editar allí y reconstruir. `site.config.json` contiene los datos públicos de la empresa. Si se modifica el correo también actualizar `index.html`, `assets/request.js` y los documentos, y comprobar todas las referencias.
 

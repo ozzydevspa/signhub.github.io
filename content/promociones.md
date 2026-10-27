@@ -1,6 +1,6 @@
 # Pilotos y códigos promocionales
 
-Versión 2026-10-22 · OZZYDEV SpA · Contacto: [ozzykundev@gmail.com](mailto:ozzykundev@gmail.com).
+Versión 2026-10-22 · OZZYDEV SpA · Contacto: [soporte@ozzydev.cl](mailto:soporte@ozzydev.cl).
 
 ## Qué concede un código
 

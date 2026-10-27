@@ -35,7 +35,7 @@ test('Pending state: seven honest placeholders, no video requests, usable on mob
   const errors = [], media = [];
   page.on('pageerror', error => errors.push(error.message));
   page.on('request', request => {if (request.resourceType() === 'media') media.push(request.url());});
-  await page.goto('/');
+  await page.goto('/signhub/');
   await expect(page.getByText('Video pendiente', {exact: true})).toHaveCount(7);
   await expect(page.locator('video')).toHaveCount(0);
   await page.screenshot({path: 'test-results/landing-desktop.png', fullPage: true});
@@ -147,7 +147,7 @@ test('An open player stays within a narrow screen and its controls remain usable
 test('Without JavaScript all original text and pending notices remain readable', async ({browser}) => {
   const context = await browser.newContext({javaScriptEnabled: false});
   const page = await context.newPage();
-  await page.goto('http://127.0.0.1:4173/');
+  await page.goto('http://127.0.0.1:4173/signhub/');
   await expect(page.getByText('Video pendiente', {exact: true})).toHaveCount(7);
   const mainHeading = page.getByRole('heading', {level: 1});
   await expect(mainHeading).toHaveCount(1);

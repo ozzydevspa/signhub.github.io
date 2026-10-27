@@ -2,7 +2,7 @@
 
 Este es el canal web de solicitudes de SignHub, de OZZYDEV SpA. Puedes usarlo sin tener instalada la aplicación y sin iniciar sesión.
 
-Escribe a [ozzykundev@gmail.com](mailto:ozzykundev@gmail.com?subject=Solicitud%20de%20privacidad%20SignHub) desde el correo asociado a tu cuenta. Si ya no puedes acceder a ese correo, indícalo para coordinar otra verificación proporcionada. No envíes contraseñas, códigos de seguridad ni copia de tu cédula en el primer mensaje.
+Escribe a [privacidad@ozzydev.cl](mailto:privacidad@ozzydev.cl?subject=Solicitud%20de%20privacidad%20SignHub) desde el correo asociado a tu cuenta. Si ya no puedes acceder a ese correo, indícalo para coordinar otra verificación proporcionada. No envíes contraseñas, códigos de seguridad ni copia de tu cédula en el primer mensaje.
 
 ## Qué puedes solicitar
 

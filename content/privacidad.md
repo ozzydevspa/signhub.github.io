@@ -4,7 +4,7 @@ Versión 2026-10-22 · Etapa piloto. Esta política describe el tratamiento prev
 
 ## 1. Quién es responsable
 
-SignHub es un proyecto de OZZYDEV SpA, RUT 78.537.887-3, con ubicación en Puente Alto, Región Metropolitana, Chile. Puedes comunicarte con la empresa en [ozzykundev@gmail.com](mailto:ozzykundev@gmail.com). Este correo es el canal para privacidad, soporte y ejercicio de derechos. No envíes contraseñas, códigos MFA ni documentos de identidad en un primer contacto.
+SignHub es un proyecto de OZZYDEV SpA, RUT 78.537.887-3, con ubicación en Puente Alto, Región Metropolitana, Chile. Puedes comunicarte con la empresa en [privacidad@ozzydev.cl](mailto:privacidad@ozzydev.cl). Este correo es el canal para privacidad y ejercicio de derechos. Para soporte de SignHub escribe a [soporte@ozzydev.cl](mailto:soporte@ozzydev.cl); para consultas generales de la empresa, a [contacto@ozzydev.cl](mailto:contacto@ozzydev.cl). No envíes contraseñas, códigos MFA ni documentos de identidad en un primer contacto.
 
 OZZYDEV SpA determina el tratamiento necesario para las cuentas, la seguridad, la operación y el soporte de SignHub. Una institución puede determinar finalidades y destinatarios de su diccionario; cuando SignHub trata datos por sus instrucciones, esas responsabilidades deben quedar descritas en un acuerdo institucional. No se presume que toda institución sea propietaria de los datos de sus miembros.
 
@@ -59,7 +59,7 @@ Si una obligación legal o un reclamo exige conservar información determinada, 
 
 Puedes solicitar acceso, rectificación, eliminación, oposición, bloqueo o limitación y portabilidad en los casos y desde las fechas que establezca la legislación aplicable. Puedes retirar un consentimiento para tratamientos futuros sin que eso convierta en ilícito lo realizado válidamente antes de retirarlo.
 
-Usa [Eliminar cuenta y ejercer derechos](eliminar-cuenta.html), el apartado de privacidad de la app o escribe a ozzykundev@gmail.com. No necesitas mantener la app instalada. Indica el correo de tu cuenta y el derecho solicitado; no adjuntes documentos sensibles de entrada. Te explicaremos cualquier verificación adicional necesaria.
+Usa [Eliminar cuenta y ejercer derechos](eliminar-cuenta.html), el apartado de privacidad de la app o escribe a privacidad@ozzydev.cl. No necesitas mantener la app instalada. Indica el correo de tu cuenta y el derecho solicitado; no adjuntes documentos sensibles de entrada. Te explicaremos cualquier verificación adicional necesaria.
 
 Hasta el 30 de noviembre de 2026, la atención debe respetar el régimen vigente, incluido el artículo 16 de la Ley 19.628 respecto de la falta de pronunciamiento dentro de dos días hábiles. Desde el 1 de diciembre de 2026, la reforma contempla un pronunciamiento dentro de treinta días corridos, prorrogable por una sola vez hasta treinta días adicionales cuando proceda, y los mecanismos de reclamación ante la Agencia. No se usa el plazo nuevo para extender los derechos vigentes antes de esa fecha.
 

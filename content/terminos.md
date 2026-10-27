@@ -4,7 +4,7 @@ Versión 2026-10-22 · Condiciones del piloto y propuesta para revisión antes d
 
 ## Responsable y alcance
 
-SignHub es prestado por OZZYDEV SpA, RUT 78.537.887-3, Puente Alto, Chile. Contacto: [ozzykundev@gmail.com](mailto:ozzykundev@gmail.com). Es una aplicación Android para organizar y consultar videos de lengua de señas. No es un servicio de interpretación profesional, atención de emergencias ni certificación lingüística. La versión web es informativa.
+SignHub es prestado por OZZYDEV SpA, RUT 78.537.887-3, Puente Alto, Chile. Contacto: [soporte@ozzydev.cl](mailto:soporte@ozzydev.cl). Es una aplicación Android para organizar y consultar videos de lengua de señas. No es un servicio de interpretación profesional, atención de emergencias ni certificación lingüística. La versión web es informativa.
 
 ## Cuentas y edades
 

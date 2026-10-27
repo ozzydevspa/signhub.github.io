@@ -6,7 +6,7 @@ Versión 2026-10-22 · Protocolo del piloto de SignHub.
 
 El proyecto contempla la participación de personas menores de edad con las autorizaciones, resguardos y acompañamiento adecuados. La creación o administración de instituciones, diccionarios institucionales y contrataciones se reserva a mayores de 18 años. El diccionario personal no se convierte en institucional por tener un representante.
 
-Durante el piloto, el ingreso de menores se coordina con OZZYDEV SpA por [ozzykundev@gmail.com](mailto:ozzykundev@gmail.com). Un padre, madre o representante debe iniciar la coordinación cuando se requiera autorización. No deben enviarse documentos de identidad, diagnósticos ni videos del menor en el primer correo. No se habilitará una campaña dirigida a niños antes de verificar el flujo de representación, los contenidos y la clasificación de audiencia de Google Play.
+Durante el piloto, el ingreso de menores se coordina con OZZYDEV SpA por [privacidad@ozzydev.cl](mailto:privacidad@ozzydev.cl). Un padre, madre o representante debe iniciar la coordinación cuando se requiera autorización. No deben enviarse documentos de identidad, diagnósticos ni videos del menor en el primer correo. No se habilitará una campaña dirigida a niños antes de verificar el flujo de representación, los contenidos y la clasificación de audiencia de Google Play.
 
 ## Autorizaciones según edad y datos
 

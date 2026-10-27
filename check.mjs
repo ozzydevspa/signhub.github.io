@@ -11,7 +11,9 @@ for(const file of await walk(root)){
   for(const [,target] of html.matchAll(/(?:href|src)="([^"]+)"/g)){
     if(/^(https?:|mailto:)/.test(target))continue;
     if(target.startsWith('#')){assert(html.includes(`id="${target.slice(1)}"`),'Missing anchor '+target);continue;}
-    const full=path.resolve(path.dirname(file),target.split('#')[0]);const relative=path.relative(root,full);assert(!relative.startsWith('..')&&!path.isAbsolute(relative),'Asset escapes published directory');
+    const base=process.env.PAGES_BASE_PATH || '';
+    const localTarget=target.startsWith('/') ? target.slice(base.length).replace(/^\//,'') : target.split('#')[0];
+    const full=target.startsWith('/') ? path.resolve(root,localTarget) : path.resolve(path.dirname(file),localTarget);const relative=path.relative(root,full);assert(!relative.startsWith('..')&&!path.isAbsolute(relative),'Asset escapes published directory');
     await stat(full);count++;
   }
 }
